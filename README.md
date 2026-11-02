@@ -13,17 +13,19 @@ A university project where I built a **banking transaction analysis dashboard** 
 - An interactive Power BI dashboard showing monthly trends, banking channels, KPIs, and filters.
 
 ## Dashboard preview
-![Banking analytics dashboard](screenshots/banking-dashboard-medium-filter.png)
+![Banking analytics dashboard](dashboard.png)
 
 *Preview with the **Medium** transaction amount filter selected.*
 
 ## Project files
-- [`sql/`](sql/) — database creation and sample-data scripts
-- [`powerbi/Banking_Analytics.pbix`](powerbi/Banking_Analytics.pbix) — Power BI report
+
+- [Database creation script](01_create_database.sql)
+- [Sample data generation script](02_insert_sample_data.sql)
+- [Power BI Dashboard](Analize%20Transaksionesh.pbix)
 
 ## How to run
-1. Run `sql/01_create_database.sql` in SQL Server Management Studio.
-2. Run `sql/02_insert_sample_data.sql` **once** on the new database.
+1. Run `01_create_database.sql` in SQL Server Management Studio.
+2. Run `02_insert_sample_data.sql` **once** on the new database.
 3. Open the `.pbix` file in Power BI Desktop. To refresh, update its SQL Server connection if needed.
 
-**Note:** All data is synthetic. The SQL scripts are based on my original project documentation and have not yet been independently executed in a clean SQL Server environment.
+**Note:** The SQL scripts were successfully tested in Microsoft SQL Server using a separate test database. All six tables were populated, including 1,000 transactions, and all five foreign key relationships were verified.
